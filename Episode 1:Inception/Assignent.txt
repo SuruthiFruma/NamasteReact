@@ -1,0 +1,40 @@
+1)EMMET :
+ 
+Emmet is used in VS Code that takes up abbreviations and converts it into respective code snippets
+
+2)Difference between Library and Framework
+
+A Library can be inserted in a part of code of an application whereas Framework follows a predefined structure.A web app could be of Vanilla JS/JQuery and either a header or footer could be in React.
+
+3)CDN 
+
+Content Delivery Network refers to has a distributed group of servers for resource sharing among the network.It caches the content for fast delivery to the end users.It is similar to edge location
+
+4)Why is React called as React
+
+Because of its ability to react and update the data in the components
+
+5)Crossorigin in script tag
+
+It is used to download script files from other origin bypassing the CORS error. Different origin refers to different domain, different protocol or even different port number
+
+6)Difference between React & ReactDOM
+
+Both are JS Library developed by FaceBook Devs. React is used for Building interfaces and includes methods like createElement() whereas ReactDOM is used for manipulating the DOM that comes with React Library
+
+7)Development & Production 
+
+Development is referred when product is not available to public. Production level means the project that the public is using
+
+8)Async Vs Defer
+
+Downloading the content from the network involves two steps
+ --> Fetching from network
+ --> Executing the content
+
+ When no attribute is defined in script tag, it causes the HTML parsing wait whenever it encounters the script tag, follows step 1 and 2 and continues the HTML parsing
+ When async is used in script tag, Step 1 in done in parallel to HTML Parsing and once step 1 is over, HTML Parsing is stopped and Step 2 is done. After Step 2 is done HTML Parsing is continued
+ When defer is used in script tag, Step 1 is done in parallel to HTML Parsing and HTML Parsing completes fully. Atlast the script follows Step 2
+
+ Thus async does not follow order of execution and throws error when used in multiple script tags that are dependent on each other
+ It is better to use async keyword for downloading scripts that are independent of the project (Eg: Scripts for Google Analytics)
