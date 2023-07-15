@@ -1,0 +1,47 @@
+1)NPM init
+This will configure npm into the project and create package.json file.
+Further npm install will create the package-lock.json file 
+This will contain the Dependencies of the Dependencies mentioned in package.json file . This is called transitive Dependencies.
+package.json contains Dependencies with caret (^) and tilde(~) i.e - not the exact version 
+Whereas lock files contains the exact version
+npm i will create node modueles if any Dependencies are mentioned in package.json file else it would only create package-lock.json file
+Node modules are supposed to contain the actual code of the packages that npm installed
+
+2)gitignore
+It is the file that should be given in root directory.
+Any files that could be regenrated must be contained in gitignore file.
+Only package.json file must be Github rest of the files can be ignored
+
+3)To install Parcel
+->> npm i parcel 
+--> npm i parcel --save-dev (installs as dev Dependencies)
+ 
+4)To install React
+--> npm i react
+--> npm i react-dom 
+Should import React into the app --> import React from "react" (This from "react" is the actual code contained in node modules)
+
+5)More about Parcel
+
+1)To run app using Parcel
+-->npx parcel index.html --> This runs app using parcel in dev build 
+-->npx parcel index.html --https --> This runs app using parcel in dev build but in https protocol
+-->npx parcel build index.html -->  This runs app using parcel in production build 
+--> To run the prod build 
+    --> cd dist
+    --> npx serve
+-->npx parcel build index.html --reporter @parcel/reporter-bundle-analyzer -->  This runs app using parcel in dev build also generates a bundle analyzer html file
+-->npm add @parcel/compressor-gzip @parcel/compressor-brotli --dev --> This installs compression for parcel using gzip or brotli
+
+
+6)CDN VS Node packages
+CDN has a disadvantage of fetching from the server creating latency which can be overcome with node packages injected into the application itself
+Also , upgrading to a newer version is easier with node packages semantic versioning ^ and ~.This automatically upgrades to newer versions on npm i
+Caret(^) ->Upgrades minor version
+Tilde (~)->Upgrades patch version
+
+7)Dist and parcel cache
+Dist contains actual minified and compressed production code
+Parcel cache contains the cache fiels when running the build and further it redues the time for build to create to several milliseconds
+
+

@@ -1,0 +1,32 @@
+{
+  "name": "namastereact",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"npx parcel index.html -https",
+    "prod":"npx parce build index.html --reporter @parcel/reporter-bundle-analyzer"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SuruthiFruma/NamasteReact.git"
+  },
+  "author": "Suruthi Fruma",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SuruthiFruma/NamasteReact/issues"
+  },
+  "homepage": "https://github.com/SuruthiFruma/NamasteReact#readme",
+  "devDependencies": {
+    "@parcel/reporter-bundle-analyzer": "^2.9.3",
+    "parcel": "^2.9.3",
+    "process": "^0.11.10"
+  },
+  "dependencies": {
+    "@parcel/compressor-brotli": "^2.9.3",
+    "@parcel/compressor-gzip": "^2.9.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "reactdom": "^2.0.0"
+  }
+}
