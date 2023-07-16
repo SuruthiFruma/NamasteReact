@@ -1,0 +1,67 @@
+1)Scripts in package.json:
+The package.json file contains scripts that can be executed with "npm run <script-name>".
+For the script start alone , it is sufficient to run "npm start" instead of "npm run start"
+Also, it is not necessary to add "npx or npm" before them as it will automatically execute.
+i.e -> Just we can give "parcel index.html" instead of "npx parcel index.html"
+
+
+2)Why JSX?
+JSX comes into picture because in prod level code it is difficult to have React.createElement as its synatax is clumpsy
+
+3)What is JSX?
+It is a HTML like or XML like syntax.
+It is neither a part of react nor a part of JS
+
+4)JSX VS React Element
+JSX gets converted into React.createElement(). This further in turn converts into the same object returned by React.createElement()
+Whereas React.createElement() directly returns an object that can be rendered into the root
+
+5)JSX VS Babel
+Babel is the transcompiler used by Parcel that converts the JSX into React.createElement()
+The browser (JS Engine ) can only understand ECMA script.Since JSX is not a part of ECMA , Babel transcompiles in into browser understandable React.createElement() object
+Babel also takes care converting ES6 to ES5
+
+6)Syntax of JSX
+If the JSX is of one line, there is no need of wrapping the element in "()".
+JSX must have one parent div.
+So to avoid this unnecessary tag, we can go for <React.Fragment> which will create an empty tag and will not be rendered in the dom
+Or we can just wrap JSX in "<></>"
+
+7)Functional Components in React
+These are nothing but Normal JS Functions that return a piece of JSX, these functions must be named in Camel Casing
+We can also have a functional component with and without return keyword
+Eg:
+const func=()=>{return true } is equivalent to const func=()=>true
+
+8)Rendering Components VS ReactElements
+--->To render a React Element in the root of react:
+root.render(ele)
+
+--->To render a Functional Component in root of react:
+root.render(<FunctionalComponent/>) or
+root.render(FunctionalComponent())
+
+--->To render a Functional Component inside another Functional Component
+This is known as Component Composition
+<FunctionalComponent/> or
+{FunctionalComponent()}
+
+--->To render a Functional Component inside React Element
+<FunctionalComponent/> or
+{FunctionalComponent()}
+
+---> To render a React Element(JSX) inside another React Element(JSX)
+{reactElement}
+
+--->To render a React Element(JSX) inside Functional Component
+{reactElement}
+
+9){} in JSX
+To run any piece of JS inside JSX, we can have {}
+{} also prevents cross site script attacks
+Anything given in { } will be executed and rendered in the DOM
+
+10)Multiple roots in React
+If we have Multiple React roots , the last one will be rendered in the DOM
+
+
