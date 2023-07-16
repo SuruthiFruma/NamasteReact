@@ -1,0 +1,12 @@
+1)What is JSX?
+JSX comes into picture because in prod level code it is difficult to have React.createElement as its synatax is clumpsy
+It is a HTML like or XML like syntax.
+It is neither a part of react nor a part of JS
+JSX gets converted into React.createElement(). This further in turn converts into the same object returned by React.createElement()
+Whereas React.createElement() directly returns an object that can be rendered into the root
+
+2)Script tag's type
+
+Module --> Can be imported and exported
+text/Typescript --> Tells browser that it is a Typescript file
+text.Babel --> Tells browser that it needs to be transpiled before it goes to the JS Engine
