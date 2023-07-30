@@ -1,0 +1,23 @@
+1) Is JSX mandatory for react?
+JSX is not mandatory for react but without JSX, every react element must be created with React.createElement() which will not result in a cleaner code
+
+2)Is ES6 mandatory for react?
+It is not mandatory for react . But writing react with es6 features like Arrow functions is highly recommended
+
+3)Comments in JSX
+The comments in JSX are given like {/*       */}
+
+4)<React.Fragment> Vs <><?>
+Without adding any extra divs or nodes to the DOM Tree, React.Fragment tag acts like an empty tag and returns a group of sibling with them
+<></> is a shorthand for React.Fragment
+
+6)Virtual DOM Vs DOM
+Virtual DOM is a programming concept where a copy of Browsers original DOM is kept in memory and 
+whenever there is an updation in the original Browser DOM, React uses a diffing algorithm and make changes to that particular component alone instead of refreshing the entire site. 
+
+7)Reconcilation
+The process of comparing the Browser DOM and Virtul DOM is called Reconcilation.
+The comparison is done by Diffing algorithm
+
+8)React Fibre
+React fibre is the default reconciler used for versions above React 16.

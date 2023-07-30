@@ -1,0 +1,62 @@
+--->Started with creating the outline of the food clone app. It involved Header, Body & Footer
+Header has title of the app and nav items like Home, About, Contact Us and creating
+Body has a search field and the restuarant container which has multiple restaurant cards.
+Footer contains copyrights and other information
+
+--->Inline CSS Styling
+The style properties can be described in a JS object and can be injected into JSX by passing that object to "style" attribute
+Eg:<h2 style={styleObj}></h2>
+
+
+--->Props
+Props are the arguments that is passed into functional components to make the functional component perform dynamically based on the data
+Props are always passed to the functional component as object
+
+   ---->To pass a value directly into Props:
+<Component value="5"><?Component>
+This will create an object like 
+let prop={
+    value:5
+}
+Hence this can be destructed in the functional component as let {value}=prop||{} which is equal to prop.value
+  
+    ---->To pass an already defined value
+let number=5
+<Component value={number}></Component>
+This again, will be of an object
+ let prop={
+    value=5
+}
+Hence this can be destructed in the functional component as let {value}=prop||{} which is equal to prop.value
+
+    ----->To pass an object as Props
+    let obj={
+        name :"Suruthi",
+        id:1
+    }
+
+<Component value={obj}></Component>
+This prop will be an object of the form
+let prop={
+    value:{
+        name:"Suruthi",
+        id:1
+    }
+}
+Hence this can be destructed like let {value}=prop followed by let {name,id}=value, which is equivalent to prop.value.name or prop.value.id
+
+
+--->Config Driven UI
+It is practice of dynamic webpage that rely on the data sent by backend
+Use Case:Online Food Delivery App. If the backend API sends the discounted attractive prices, it will be displayed in carousels else not
+
+--->Contatenating URL in a JSX 
+Explained how to Contatenate string inside a JSX for URL
+Eg: <img src={"https://img/"+id}
+
+--->Key Props
+The key prop must be given in List while iterating inside a JSX.Or it throws warning
+It avoids rerendering of some other components
+It is a good practice to avoid indexes as keys as it is not sure that the rerendering will be in a certain order
+
+
