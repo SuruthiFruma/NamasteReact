@@ -1,0 +1,45 @@
+Theory:
+
+1)Monolithic/Microservice:
+
+This episode started with Monolithic and Microservices architecture:In Microservice, each part of the code i.eUI, Backend, API, DB have a different repo and all these services run on the same domain and different port.whereas in Monolithic architecture, all the code are in the same repo.Microservices follow the principle of Separation of Concern & Single Responsibility Principle
+
+2)Two Procedures of doing API calls:
+
+-->On Page Load --> Render the UI(In frozen state) -->API Call and then unfreeze the UI
+
+-->On Page Load --> Render the UI with some parts --> API Call --> Render the complete UI
+
+The second approach is preffered more
+
+3)useEffect:
+
+useEffect() is one of the Hooks that takes up two arguments. A call backfunction and a dependency array.
+
+The callback function in useEffect() is executed after the page completes its render
+
+4)fetch():
+
+Explained fetching live swiggy api data using fetch() . It is a method provided by JS engine in browser(not by JS) to fetch data. Enabled browsers CORS disabling using extension.Also explained resolving promises using async/await syntax.
+
+5)Optional Chaning:
+
+6)Implemented Login/Logout Button :
+
+Created a state variable that toogles login logout button when pressed
+
+7)Shimmer UI:
+
+Based on Conditional Rendering, the shimmer ui is displayed when the API call hasnt been finished.
+
+8)Rerendering on State variable change:
+
+Whenever there is a change in state variable, i.e setter function of useState() is called, the entire component rerenders , but only the updates the necessary UI. This is done by diffing algorithm that creates a virtual DOM.This entire reconciliation process is done so fast by React
+
+9)Implemented a Search field:
+
+An input that takes up the search text value and a search button that when clicked on , sets the search text is implemented.On click , the list of restaurants is searched for the search text and rendered in the UI.
+
+10)A bug on search feature:
+
+Since the searching filters out the actual list of restaurants from the API, it is not able to do a second search , also the top rated restaurant will not work on this. So , a new copy of the object is created as a state variable and also set to the api data.Searching is done on the intact data.But rendering in the UI is done on the filtered data
