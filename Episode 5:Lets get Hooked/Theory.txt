@@ -1,0 +1,47 @@
+Theory:
+
+1)Modifying Codebase:
+
+In this episode, Akshay started moving the codebase to industry standard. He said its a good practice to have the file name and component name as same. The react components can be named either with .js extension and .jsx extension .They are the same . 
+
+2)Export & Import 
+
+Its of two types named export and default export
+
+Default export: e.g -> export default <Component name>
+
+Import :e.g-> import <Component-name> from "path"
+
+Named export :e.g -> export const/let/var = value
+
+Import : :e.g -> import {value} from "path"
+
+The modules cant have multiple default exports 
+
+While importing in the path, its okay to have no extension. Then the file is defaulted to .js
+
+3) Explained how normal JS variable behaves on data change:
+
+Created a feature in the food clone app, for top rated restaurants, which on click , directs to restaurants with 4 rating. On click of the button, the restaurants list is filtered out using .filter(), here only the data changes but not the UI, even though it is dependent on the restaurants mock data.
+
+4)Hooks:
+
+ This is where hooks comes into picture. useState()
+
+is a hook.Hooks are nothing but a normal JS utility function provided by React. Whenever the state Variable changes , the component in React rerenders. useState() focueses on keeping the UI layer and Data layer in sync, which can be only manually achieved in vanilla JS.The scope of the state variable is within that functional component alone.
+
+5)Reconciliation:
+
+The virtual DOM is the representation of Browser DOM. The whole React Component is returned as a JS object (like the React.createElement()' s return value). This is known as virtual DOM. The process of Reconciliation is accomplished by React 16 default reconciler - React Fiber. It uses Diffing Algorithm that checks for the change in the new and updated Virtual DOM and updates the UI.
+
+Assignment:
+
+1)* import:
+
+Here the whole module can be imported from the component that is named exported 
+
+e.g -> import * as values from "path"
+
+2)config.js file:
+
+It is a text editable file that can be used in the source code for containing values as key value pairs to avoid hard coding the source files
