@@ -1,0 +1,51 @@
+1)Installed React router 6
+
+2)Rendering react root using router
+-->createBrowserRouter -> It takes up an array of object with path , element , errorElement and children.
+-->The root component that must be rendered must be given a path and element in createBrowserRouter
+--> In root.render(), RouterProvider component must be given along with a prop called "router" that takes up the createBrowserRouter object
+
+3)Children routing/Nested routing
+-->Children/Nested routing comes into picture when once part of the page needs to intact and the other needs to keep changing
+
+1) <Link> Component must be provided with the prop "to" which takes the actual browsers route
+2) <Outlet> Component must be choosen
+3) Then configure child routes, in the parent component of the Outlet component, the childroutes must be configured
+
+(The outlet component changes accordingly)
+
+4)Dynamic routing
+This is a technique where the routes keep on changing dynamically
+
+1) <Link> component must be given the correct routes to the "to" prop
+2) In the path of the routes, the routes must be defined with /: so that it is dynamically
+3)In the component , that is rendered on the route , the exact route can be got by a hook called "useParam"
+  useParam returns an object that contains the route id given in the path which can be destructed and used
+
+5)useRouteError
+This hook returns an object that contains the information about the error routes
+We can render a custom error component
+
+6)Created a childroutes for Home, About, Cart, Contact 
+Created a restaurant card menu that onclick routes to the particular menu
+
+7)Used swiggy menu API that creates a CORS Error which can overcome with cors disable extension and by passing headers redirect as follow
+
+8)useState
+Whenever there is a change in state variable, the whole component rerenders and executes the code in them
+Not supposed to declare outside of the functional component as it is a local state variable (Holds good for other hooks as well)
+Should be created at the top level of the component
+Should not be declared in conditionals, loops 
+
+9)useEffect
+With no dependency array, renders everytime
+With empty dependency array , renders on init
+With a variable, renders on the variable change
+
+10)SSR VS CSR
+SSR involves rendering JSP pages from server
+CSR takes pages up from routes
+
+11).map() always require a key at the top level of the component
+
+12)anchor tag refreshes the whole component but Link component renders only the specific thing
