@@ -1,0 +1,44 @@
+Class Components
+It is a class in JS that returns a piece of JSX on the render method
+ 
+ 1)Major methods of class Components
+ ->Constructor() -> Whenever the instance of class is created (Rendered in the DOM), the constructor is called , thats why this is the best place to capture props and establish state
+ ->Render() -> The method that returns a JSX as in Functional Components
+ ->ComponentDidMount() -> This is similar to useEffect() Hook that is executed after the componenent is rendered in the DOM, displayed in the UI
+ ->ComponentDidUpdate
+ ->ComponentWillUnmount
+
+ 
+ 2)PROPS
+ It is captured in the constructor and can be used in rest of the class from "this"
+
+ 3)STATES
+ The states are declared in construtor() as one object
+ It is again captured in the rest of the class componenent using this keyword
+
+ 4)Setting the state
+ This is done by the function setState()
+ This expects an object with the updated value of the state
+ Setting the state triggers the reconciliation process and the render method is called once again
+
+ 5)LIFE CYCLE OF CLASS COMPONENTS
+
+ ->MOUNTING -> The first time , constructor and render is called and then UI is updated with DOM and componentDidMount()
+ ->UPDATING -> Whenever there is a change in state variable, UPDATING phase triggers and render is called (Constructor() is called once)
+ ->UNMOUNTING -> On component removed from DOM
+
+ ->RENDER PHASE -> The phase where constructor() and render() is called
+ ->COMMIT PHASE -> The phase where ComponentDidMount() or ComponentDidUpdate() or ComponentWillUnmount() is called
+
+ 6)MULTIPLE CHILD CALLING
+ When multiple child class componenent is called, the render phase(constructor and render is batched ) of the children and the commit phase (ComponentDidMount() or ComponentDidUpdate() or ComponentWillUnmount()) of the children is called
+ This is because the DOM Manipulation is expensive , so rendering in the UI is done at once
+
+ 7)STATE variable change
+ Whenver there is a change in the state variable, the reconciliation process triggers
+ This checks the difference in the object returned by the component(i.e VIRTUAL DOM)
+ For functional component, the entire function executes again
+ For class component, the render() method is alone again triggered
+
+ Explained fetching GITHUB API for About Page 
+
