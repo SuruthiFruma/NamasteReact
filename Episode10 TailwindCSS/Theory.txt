@@ -1,0 +1,10 @@
+1)Installation of Tailwind CSS
+
+The different ways of having styles in our application -->Traditional index.css file -->SCSS -->SASS -->Style Components -->Styling Frameworks First explained about the installation of Tailwind in a parcel bundler using project 1)Install Tailwind ->npm install -D tailwindcss postcss -> This installs tailwind and postcss .Postcss takes the CSS from the JS and converts to browser understandable AST ->npx tailwindcss init --> creates a tailwind.config.js file 2)Creating a postcssrc file and adding tailwind css plugin { "plugins": { "tailwindcss": {} } } 3)Configuring template paths in tailwind.config.js files module.exports = { content: [ "./src/**/*.{html,js}", ], theme: { extend: {}, }, plugins: [], } 4)Adding Tailwind directive to the CSS @tailwind base; @tailwind components; @tailwind utilities; This should be added in the index.css file in the source directory 5)Building with tailwind npx parcel src/index.html --> This will build with the tailwind configs Revamped the entire swiggy clone app to Tailwind CSS in this tutorial
+
+2) Advantages/Disadvantages of Tailwind
+Pros: Lightweight & Parcel bundle only ships the classes thats been used and ships only once the used classes
+Cons: Code Readability with many classes
+
+3)Hardcoding classes 
+Syntax: w-[250px] instead of giving w-10
