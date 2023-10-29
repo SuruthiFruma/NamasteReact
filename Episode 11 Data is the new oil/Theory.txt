@@ -1,0 +1,31 @@
+1)HOC
+
+A higher order component takes up a component as an input and returns an component as an output
+Explained the "Promoted labled restaurant card" for HOC
+Explained passing and capturing props using spread operator
+
+2)Built an accordion for restaurant category
+
+-->Built an accordion that opens and closes when clicked(Uncontrolled component)
+-->Built an accordion that auto closes the rest of the accordion when clicked(Controlled component & Lifting up the state)
+
+   -->Uncontrolled component: A component that doesnt depend on the parent component purely
+   Here, a state variable is declared in AccordionList component that toggles itself to true and false when clicked
+
+   -->Controlled component : The component that depends on the parent component for states and props
+   Here, Restaurant Menu (Parent component) has the state variable and the setter function that is passed as props to RestaurantCategory (child)
+    
+   -->Lifting the state up
+   When the child wants to modify/update the state variable of the parent component, it is called as Lifting the state up
+   Here, we send true to only to the accordion that is clicked and false to the rest of the accordion
+   The state variable in RestaurantMenu(showIndex, setShowIndex) needs to be passed to RestaurantCategory .Later setShowIndex is modified in the child(RestaurantCategory) when clicked
+   showAccordion is also passed as a prop to decided if the index and showIndex is same it sets to to true and shows the accordion or else false
+
+3)React DevTools
+Profiler, Flamegraph
+
+4)Context API
+
+-->createContext
+-->useContect(to use in functional component) and Consumer(this is to use in class component)
+-->Provider(used to modify data and send it to group of component) and then useContext() and fetch the data wherever it is needed
