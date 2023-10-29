@@ -1,0 +1,55 @@
+Redux:
+
+This episode on Redux for state management.Redux is an external library and not a part of react .Its used along with redux toolkit .Redux toolkit is for redux and react-redux is for anything that helps redux communicate with react.zustand is an another library alternative to redux.Its also known as RTK.Benefits of using RTK over Vanilla Redux: Less packages, less complicated, less boiler plate codes
+
+Theory of Redux:
+
+Redux provides a store that is an enormous JS object. This store is further divided into slices based on logical separation.For.eg - cart slice, user slice.
+
+To write into a store:
+
+On click, an event will be triggered -> Dispatch an action (useDispatcher() hook)-> Call the reducer function -> Update a particular slice of a store
+
+To read a store:
+
+Subscribe the react component to the store using useSelector() hook
+
+////////////////////////
+
+1)Creating a store
+
+->configureStore() from Redux toolkit
+
+2)Connecting the store to the application
+
+->Provider Component from react-redux .This takes a prop as store where the previously created store is provided as value to the prop
+
+3)Creating Slices
+
+createSlice() from redux-toolkit.This takes in name, initialState, reducers and actions in them.The action methods has the access to state and action as arguments where state refers to the value of the initialState and action gives the data when it gets dispatched through action.payload.Export the reducer and action of the slice
+
+4)Integrating Slice with the store
+
+In the app's Store, created using configureStore(), configure the reducer, where it takes the name and reducer of the slice
+
+5)Reading the data from store
+
+useSelector() from react-redux.This takes up a callback function with the store data.And subscribes to the slices data
+
+6)Writing into the store
+
+useDispatch() from react-redux.In the dispatcher hook call the action methods of the slices
+
+/////////////
+
+In this episode, add items to cart and remove entire card is shown
+
+//////////
+
+Note:
+
+1)Always subscribe to small portion of the store in useSelector() hook
+
+2)reducer keyword is used in the store and reducers keyword is used in slices
+
+3)In vanilla redux, mutating the state is not possible but possible in toolkit
